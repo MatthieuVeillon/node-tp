@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<ul>
+  {{#each files}}
+  <li>
+  <a href="files/file/{{this}}">{{this}}</li>
+  </li>
+  {{/each}}
+</ul>
+<form method="post" action="./files" enctype="multipart/form-data">
+  <input type="file" name="file" />
+  <button>Upload</button>
+</form>
